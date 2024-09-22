@@ -1,4 +1,3 @@
--- ฟังก์ชันสำหรับการเช็คและสร้างไฟล์
 local function CheckAndCreateFile(fileName, data)
     if not pcall(readfile, fileName) then
         writefile(fileName, data)
@@ -65,6 +64,9 @@ local function checkAndCreateFileIfNeeded()
 
         wait(5) -- รอ 5 วินาทีก่อนทำการเช็คอีกครั้ง
     end
+
+    -- ออกจากฟังก์ชันหลังจากสร้างไฟล์สำเร็จ
+    return
 end
 
 -- เรียกใช้งานฟังก์ชัน
