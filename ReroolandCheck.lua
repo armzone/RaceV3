@@ -24,6 +24,12 @@ end
 
 -- ฟังก์ชันหลักสำหรับการเช็คและสร้างไฟล์ตามเผ่าที่กำหนด
 local function checkAndCreateFileIfNeeded()
+    -- ตรวจสอบเงื่อนไข PlaceId
+    if game.PlaceId ~= 4442272183 then
+        wait(15)  -- รอ 30 วินาที
+        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
+    end
+
     local player = game:GetService("Players").LocalPlayer
     local raceValue = player.Data.Race.Value
     local playerName = player.Name -- ดึงชื่อผู้เล่น
