@@ -27,7 +27,7 @@ while true do
     print("Result:", result)
 
     -- ตรวจสอบค่าของ result
-    if result == 0 then
+    if result == 1 then
         local fileCreated = CreateFile(fileName, fileData)
         if fileCreated then
             print("File creation successful. Exiting loop.")
